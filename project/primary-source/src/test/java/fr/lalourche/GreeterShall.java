@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
  *
  */
 @RunWith(Arquillian.class)
-public class GreeterTest
+public class GreeterShall
 {
 
   @Inject
@@ -35,10 +35,10 @@ public class GreeterTest
   }
   
   /**
-   * Test method for {@link fr.lalourche.Greeter#createGreeting(java.lang.String)}.
+   * The greeter shall say hello to anyone.
    */
   @Test
-  public final void testCreateGreeting()
+  public final void greetAnyName()
   {
     String result = greeter.createGreeting("World");
     assertEquals("Hello World !", result);
