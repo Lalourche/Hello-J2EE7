@@ -1,6 +1,6 @@
 <project>
    <modelVersion>4.0.0</modelVersion>
-   <groupId>root</groupId>
+   <groupId>fr.lalourche</groupId>
    <version>1.0</version>
    <artifactId>project</artifactId>
    <packaging>pom</packaging>
@@ -29,23 +29,23 @@
    <dependencyManagement>
       <dependencies>
          <dependency>
-            <groupId>root.project.projects</groupId>
+            <groupId>fr.lalourche.project.projects</groupId>
             <artifactId>logging</artifactId>
             <version>1.0</version>
          </dependency>
          <dependency>
-            <groupId>root.project</groupId>
+            <groupId>fr.lalourche.project</groupId>
             <artifactId>primary-source</artifactId>
             <version>1.0</version>
          </dependency>
          <dependency>
-            <groupId>root.project.servlets</groupId>
+            <groupId>fr.lalourche.project.servlets</groupId>
             <artifactId>servlet</artifactId>
             <version>1.0</version>
             <type>war</type>
          </dependency>
          <dependency>
-            <groupId>root.project</groupId>
+            <groupId>fr.lalourche.project</groupId>
             <artifactId>ejbs</artifactId>
             <version>1.0</version>
             <type>ejb</type>
