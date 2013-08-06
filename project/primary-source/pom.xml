@@ -13,7 +13,13 @@
       <dependency>
          <groupId>fr.lalourche.project.projects</groupId>
          <artifactId>logging</artifactId>
-      </dependency>                  
+      </dependency>
+      <dependency>
+      	<groupId>junit</groupId>
+      	<artifactId>junit</artifactId>
+      	<version>4.11</version>
+      	<scope>test</scope>
+      </dependency>
    </dependencies>
    <build>
       <plugins>
