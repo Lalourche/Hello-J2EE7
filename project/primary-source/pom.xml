@@ -21,6 +21,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
       	<version>4.11</version>
       	<scope>test</scope>
       </dependency>
+      <dependency>
+      	<groupId>org.glassfish.main.extras</groupId>
+      	<artifactId>glassfish-embedded-all</artifactId>
+      	<scope>provided</scope>
+      	<version>4.0</version>
+      </dependency>
    </dependencies>
    <build>
       <plugins>
