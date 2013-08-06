@@ -5,6 +5,10 @@ package fr.lalourche;
 
 import static org.junit.Assert.*;
 
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
+
 import javax.inject.Inject;
 
 import org.jboss.arquillian.container.test.api.Deployment;
@@ -42,6 +46,18 @@ public class GreeterShall
   {
     String result = greeter.createGreeting("World");
     assertEquals("Hello World !", result);
+  }
+  
+  /**
+   * The Greeter shall print out onto a stream.
+   */
+  @Test
+  public final void greetOnAStream()
+  {
+    OutputStream out = new ByteArrayOutputStream();
+    
+    greeter.greet(out, "World");
+    assertEquals("Hello World !", out.toString());
   }
 
 }

@@ -3,7 +3,8 @@
  */
 package fr.lalourche;
 
-import java.io.PrintStream;
+import java.io.IOException;
+import java.io.OutputStream;
 
 /**
  * @author Lalourche
@@ -11,11 +12,27 @@ import java.io.PrintStream;
  */
 public class Greeter
 {
-//  public void greet(PrintStream to, String name) {
-//    to.println(createGreeting(name));
-//  }
 
   public String createGreeting(String name) {
     return "Hello " + name + " !";
+  }
+
+  /**
+   * @param out the output stream
+   * @param name
+   */
+  public void greet(OutputStream out, String name)
+  {
+    String s = createGreeting(name);
+    try
+    {
+      out.write(s.getBytes());
+      out.flush();
+      out.close();
+    }
+    catch (IOException e)
+    {
+      e.printStackTrace();
+    }
   }
 }
