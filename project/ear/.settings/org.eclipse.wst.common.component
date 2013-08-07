@@ -11,18 +11,6 @@
         <dependent-module archiveName="primary-source-1.0.jar" deploy-path="/" handle="module:/resource/primary-source/primary-source">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="shrinkwrap-descriptors-spi-2.0.0-alpha-5.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-spi/2.0.0-alpha-5/shrinkwrap-descriptors-spi-2.0.0-alpha-5.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="shrinkwrap-descriptors-api-base-2.0.0-alpha-5.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-api-base/2.0.0-alpha-5/shrinkwrap-descriptors-api-base-2.0.0-alpha-5.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="fest-assert-1.4.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/easytesting/fest-assert/1.4/fest-assert-1.4.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="fest-util-1.1.6.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/easytesting/fest-util/1.1.6/fest-util-1.1.6.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <dependent-module archiveName="logging-1.0.jar" deploy-path="/" handle="module:/resource/logging/logging">
             <dependency-type>uses</dependency-type>
         </dependent-module>
