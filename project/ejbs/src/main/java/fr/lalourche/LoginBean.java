@@ -4,12 +4,14 @@
 package fr.lalourche;
 
 import javax.ejb.EJB;
+import javax.ejb.Stateful;
 
 /**
  * @author Lalourche
  *
  */
-public class LoginImpl implements Login
+@Stateful
+public class LoginBean implements Login
 {
 
   @EJB

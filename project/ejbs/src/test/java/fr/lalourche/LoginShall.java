@@ -5,10 +5,7 @@ package fr.lalourche;
 
 import static org.junit.Assert.*;
 
-import java.io.ByteArrayOutputStream;
-import java.io.OutputStream;
-
-import javax.inject.Inject;
+import javax.ejb.EJB;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -26,7 +23,7 @@ import org.junit.runner.RunWith;
 public class LoginShall
 {
 
-  @Inject
+  @EJB
   Login login;
   
   @Deployment
@@ -34,7 +31,7 @@ public class LoginShall
   {
       return ShrinkWrap.create(JavaArchive.class)
           .addClass(Login.class)
-          .addClass(LoginImpl.class)
+          .addClass(LoginBean.class)
           .addClass(Greeter.class)
           .addClass(GreeterBean.class)
           .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
