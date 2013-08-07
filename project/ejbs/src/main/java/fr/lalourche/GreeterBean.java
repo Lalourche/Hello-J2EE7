@@ -6,11 +6,14 @@ package fr.lalourche;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import javax.ejb.Stateless;
+
 /**
  * @author Lalourche
  *
  */
-public class GreeterImpl implements Greeter
+@Stateless
+public class GreeterBean implements Greeter
 {
 
   public String createGreeting(String name) {

@@ -23,41 +23,31 @@ import org.junit.runner.RunWith;
  *
  */
 @RunWith(Arquillian.class)
-public class GreeterShall
+public class LoginShall
 {
 
   @Inject
-  Greeter greeter;
+  Login login;
   
   @Deployment
   public static JavaArchive createDeployment()
   {
       return ShrinkWrap.create(JavaArchive.class)
+          .addClass(Login.class)
+          .addClass(LoginImpl.class)
           .addClass(Greeter.class)
           .addClass(GreeterBean.class)
           .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
   }
   
   /**
-   * The greeter shall say hello to anyone.
+   * The login allows to input user name.
    */
   @Test
-  public final void greetAnyName()
+  public final void getUserName()
   {
-    String result = greeter.createGreeting("World");
-    assertEquals("Hello World !", result);
-  }
-  
-  /**
-   * The Greeter shall print out onto a stream.
-   */
-  @Test
-  public final void greetOnAStream()
-  {
-    OutputStream out = new ByteArrayOutputStream();
-    
-    greeter.greet(out, "World");
-    assertEquals("Hello World !", out.toString());
+    login.enterName("MyName");
+    assertEquals("MyName", login.getName());
   }
 
 }
