@@ -5,7 +5,6 @@ package fr.lalourche;
 
 import static org.junit.Assert.*;
 
-import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 
@@ -35,6 +34,7 @@ public class GreeterShall
   {
       return ShrinkWrap.create(JavaArchive.class)
           .addClass(Greeter.class)
+          .addClass(GreeterImpl.class)
           .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
   }
   
