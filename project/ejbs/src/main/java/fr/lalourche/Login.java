@@ -14,9 +14,9 @@ public interface Login
 {
 
   /**
-   * @param string
+   * @param name
    */
-  void enterName(String string);
+  String enterName(String name);
 
   /**
    * @return

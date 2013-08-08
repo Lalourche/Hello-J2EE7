@@ -10,7 +10,6 @@ import javax.ejb.EJB;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,11 +29,7 @@ public class LoginShall
   public static JavaArchive createDeployment()
   {
       return ShrinkWrap.create(JavaArchive.class)
-          .addClass(Login.class)
-          .addClass(LoginBean.class)
-          .addClass(Greeter.class)
-          .addClass(GreeterBean.class)
-          .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+          .addPackage(Greeter.class.getPackage());
   }
   
   /**
@@ -45,6 +40,15 @@ public class LoginShall
   {
     login.enterName("MyName");
     assertEquals("MyName", login.getName());
+  }
+  
+  /**
+   * The login allows to greet user.
+   */
+  @Test
+  public final void greetUser()
+  {
+    assertEquals("Hello MyName !", login.enterName("MyName"));
   }
 
 }

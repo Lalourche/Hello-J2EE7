@@ -22,9 +22,10 @@ public class LoginBean implements Login
   /* (non-Javadoc)
    * @see fr.lalourche.Login#enterName(java.lang.String)
    */
-  public void enterName(String string)
+  public String enterName(String name)
   {
-    this.name = string;
+    this.name = name;
+    return greeter.createGreeting(name);
   }
 
   /* (non-Javadoc)
