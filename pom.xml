@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>HelloJEE7</artifactId>
-    <groupId>fr.lalourche</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
   <groupId>fr.lalourche</groupId>
-  <artifactId>project</artifactId>
+  <artifactId>HelloJEE7</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>project</name>
+  <name>Hello-J2EE7</name>
   <modules>
-    <module>HelloJEE7-ejb</module>
-    <module>HelloJEE7-api</module>
-    <module>HelloJEE7-web</module>
-    <module>HelloJEE7-ear</module>
+    <module>project</module>
+    <module>integration-test</module>
   </modules>
 </project>
