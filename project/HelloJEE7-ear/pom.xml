@@ -17,6 +17,27 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>fr.lalourche</groupId>
+            <artifactId>HelloJEE7-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+			<type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>fr.lalourche</groupId>
+            <artifactId>HelloJEE7-ejb</artifactId>
+            <version>1.0-SNAPSHOT</version>
+			<type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>fr.lalourche</groupId>
+            <artifactId>HelloJEE7-web</artifactId>
+            <version>1.0-SNAPSHOT</version>
+			<type>war</type>
+        </dependency>
+    </dependencies>
   
     <build>
         <plugins>
@@ -36,6 +57,21 @@
                 <configuration>
                     <version>6</version>
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <modules>
+                        <ejbModule>
+                            <groupId>fr.lalourche</groupId>
+                            <artifactId>HelloJEE7-ejb</artifactId>
+                        </ejbModule>
+                        <webModule>
+                            <groupId>fr.lalourche</groupId>
+                            <artifactId>HelloJEE7-web</artifactId>
+                            <context-root>/HelloJEE7-web</context-root>
+                        </webModule>
+                        <jarModule>
+                            <groupId>fr.lalourche</groupId>
+                            <artifactId>HelloJEE7-api</artifactId>
+                        </jarModule>
+                    </modules>
                 </configuration>
             </plugin>
         </plugins>

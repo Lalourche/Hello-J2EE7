@@ -21,6 +21,20 @@
     
     <dependencies>
         <dependency>
+            <groupId>fr.lalourche</groupId>
+            <artifactId>HelloJEE7-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+			<type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>fr.lalourche</groupId>
+            <artifactId>HelloJEE7-ejb</artifactId>
+            <version>1.0-SNAPSHOT</version>
+			<type>ejb</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>7.0</version>
@@ -75,6 +89,27 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.16</version>
+				<!--executions>
+					<execution>
+						<id>sf1</id>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<phase>test</phase>
+					</execution>
+				</executions-->
+				<configuration>
+					<includes>
+						 <include>**/utest/**/*Test.java</include>
+						 <include>**/utest/**/Test*.java</include>
+						 <include>**/utest/**/*Shall.java</include>
+					</includes>
+				</configuration>
+			</plugin>
         </plugins>
     </build>
 
