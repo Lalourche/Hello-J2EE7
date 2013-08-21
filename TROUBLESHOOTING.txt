@@ -1,0 +1,5 @@
+- Failed to compile : check that you are not running on a JRE
+	==> In order to override default JAVA_HOME, create file %HOME%\mavenrc_pre.bat containing the JAVA_HOME for Maven.
+	For instance :
+		set JAVA_HOME=c:\dev\glassfish4\jdk7
+
