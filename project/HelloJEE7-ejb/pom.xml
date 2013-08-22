@@ -86,7 +86,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.16</version>
-				<!--executions>
+				<!-- <executions>
 					<execution>
 						<id>sf1</id>
 						<goals>
@@ -94,12 +94,12 @@
 						</goals>
 						<phase>test</phase>
 					</execution>
-				</executions-->
+				</executions> -->
 				<configuration>
 					<includes>
-						 <include>**/utest/**/*Test.java</include>
-						 <include>**/utest/**/Test*.java</include>
-						 <include>**/utest/**/*Shall.java</include>
+						 <include>**/*Test.java</include>
+	                     <include>**/Test*.java</include>
+	                     <include>**/*Shall.java</include>
 					</includes>
 				</configuration>
 			</plugin>

@@ -76,9 +76,9 @@
 				</executions>
 				<configuration>
 					<includes>
-						<include>**/itest/**/*Test.java</include>
-						<include>**/itest/**/Test*.java</include>
-						<include>**/itest/**/*Shall.java</include>
+						 <include>**/*Test.java</include>
+	                     <include>**/Test*.java</include>
+	                     <include>**/*Shall.java</include>
 					</includes>
 				</configuration>
 			</plugin>
