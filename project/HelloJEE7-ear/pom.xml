@@ -16,6 +16,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <glassfish.directory>C:\dev\glassfish4</glassfish.directory>
     </properties>
     
     <dependencies>
@@ -74,6 +75,51 @@
                     </modules>
                 </configuration>
             </plugin>
+	        <plugin>
+	             <groupId>org.glassfish.maven.plugin</groupId>
+	             <artifactId>maven-glassfish-plugin</artifactId>
+	             <version>2.1</version>
+                 <executions>
+                    <execution>
+                        <id>gf-undeploy</id>
+                        <goals>
+                            <goal>undeploy</goal>
+                        </goals>
+                        <phase>clean</phase>
+                    </execution>
+                    <execution>
+                        <id>gf-deploy</id>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                        <phase>package</phase>
+                    </execution>
+                 </executions>
+	             <configuration>
+	                 <!-- <terse>false</terse>
+	                 <echo>true</echo>
+	                 <debug>true</debug-->
+	                 <glassfishDirectory>${glassfish.directory}</glassfishDirectory>
+	                 <user>admin</user>
+	                 <!-- adminPassword></adminPassword-->
+	                 <passwordFile>C:\dev\glassfish4\glassfish\domains\domain1\config\admin-keyfile</passwordFile>
+	                 <domainDirectory>${glassfish.directory}/glassfish/domains/</domainDirectory>
+	                 <domain>
+	                     <name>domain1</name>
+	                     <host>localhost</host>
+	                     <adminPort>4848</adminPort>
+                         <httpPort>8080</httpPort>
+                         <httpsPort>8443</httpsPort>
+	                 </domain>
+	                 <components>
+	                     <component>
+	                         <name>${project.artifactId}</name>
+	                         <!-- <artifact>${project.basedir}/ear/target/${project.build.finalName}.ear</artifact> -->
+	                         <artifact>target/${project.build.finalName}.ear</artifact>
+	                     </component>
+	                 </components>
+	             </configuration>
+	        </plugin>
         </plugins>
     </build>
     
