@@ -19,7 +19,7 @@ import fr.lalourche.Login;
  */
 @Path("/login")
 @Stateless
-public class LoginRest extends Application
+public class LoginResource extends Application
 {
   @EJB
   private Login login;

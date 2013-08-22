@@ -32,7 +32,7 @@ import fr.lalourche.HelloWorld;
  *
  */
 @RunWith(Arquillian.class)
-public class LoginRestShall
+public class LoginResourceShall
 {
   @ArquillianResource 
   URL baseUrl;
@@ -42,7 +42,7 @@ public class LoginRestShall
   {
     return ShrinkWrap.create(WebArchive.class, "test.war")
         .addClass(HelloWorld.class)
-        .addClass(LoginRest.class)
+        .addClass(LoginResource.class)
         .addPackage(Greeter.class.getPackage());
   }
   
